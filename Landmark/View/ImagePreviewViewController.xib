@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImagePreviewViewController" customModule="Landmark" customModuleProvider="target">
+            <connections>
+                <outlet property="imagePreview" destination="Hhv-qe-6Xj" id="kOS-e3-mqi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="ImagePreview">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hhv-qe-6Xj">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                </imageView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NqL-ow-3Hh">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Preview" id="BxW-rh-mxN"/>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="NqL-ow-3Hh" firstAttribute="trailing" secondItem="Hhv-qe-6Xj" secondAttribute="trailing" id="1qM-Gt-zUe"/>
+                <constraint firstItem="Hhv-qe-6Xj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nch-Y8-DdE"/>
+                <constraint firstItem="NqL-ow-3Hh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PJ1-IF-Htp"/>
+                <constraint firstItem="NqL-ow-3Hh" firstAttribute="leading" secondItem="Hhv-qe-6Xj" secondAttribute="leading" id="bmf-tB-iQO"/>
+                <constraint firstItem="Hhv-qe-6Xj" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="kp1-5U-03i"/>
+                <constraint firstItem="Hhv-qe-6Xj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="lD9-8o-Ozd"/>
+                <constraint firstItem="Hhv-qe-6Xj" firstAttribute="top" secondItem="NqL-ow-3Hh" secondAttribute="bottom" id="xCt-Ue-v4k"/>
+            </constraints>
+            <point key="canvasLocation" x="-30.434782608695656" y="66.964285714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
