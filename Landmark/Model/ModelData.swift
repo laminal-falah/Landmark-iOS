@@ -8,12 +8,15 @@
 import Foundation
 
 final class ModelData {
+    
+    static let shared = ModelData()
+    
     var landmarks: [Landmark] = load("landmarks.json")
     
     var profile: Profile = load("profile.json")
 }
 
-func load<T: Decodable>(_ filename: String) -> T {
+private func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
         
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else {

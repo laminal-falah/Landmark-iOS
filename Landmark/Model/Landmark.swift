@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct Landmark: Codable, Hashable, Identifiable {
+struct Landmark: Codable {
     var id: Int
     var name: String
     var state: String

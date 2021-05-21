@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    let landmarks = ModelData().landmarks
+    let landmarks = ModelData.shared.landmarks
     
     @IBOutlet weak var landmarkTableList: UITableView!
     
@@ -49,6 +49,8 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
         
         detail.landmark = landmarks[indexPath.row]

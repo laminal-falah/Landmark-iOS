@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    let profile = ModelData().profile
+    let profile = ModelData.shared.profile
     
     @IBOutlet weak var imageProfile: UIImageView!
     

@@ -8,11 +8,11 @@
 import UIKit
 import MapKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, CLLocationManagerDelegate {
 
     var landmark: Landmark?
     
-    let manager = CLLocationManager()
+    private let manager = CLLocationManager()
     
     @IBOutlet weak var location: MKMapView!
     @IBOutlet weak var imageView: UIImageView!
@@ -70,9 +70,5 @@ extension DetailViewController: MKMapViewDelegate {
         let region = MKCoordinateRegion(center: landmark!.locationCoordinates, span: span)
         location.setRegion(region, animated: true)
     }
-    
-}
-
-extension DetailViewController: CLLocationManagerDelegate {
     
 }
